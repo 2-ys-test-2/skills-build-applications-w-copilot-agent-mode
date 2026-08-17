@@ -1,0 +1,41 @@
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef6ff 100%);
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: #e6f4ff;
+  color: #0056b3;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
