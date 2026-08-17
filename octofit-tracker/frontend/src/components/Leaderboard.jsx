@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 
-const getApiBaseUrl = () => {
+const getApiUrl = () => {
   const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim()
 
   if (!codespaceName) {
-    return 'http://localhost:8000/api'
+    return 'http://localhost:8000/api/leaderboard/'
   }
 
-  return `https://${codespaceName}-8000.app.github.dev/api`
+  return `https://${codespaceName}-8000.app.github.dev/api/leaderboard/`
 }
 
 const normalizeRecords = (payload) => {
@@ -55,7 +55,7 @@ function Leaderboard() {
   useEffect(() => {
     let isActive = true
 
-    fetch(`${getApiBaseUrl()}/leaderboard/`)
+    fetch(getApiUrl())
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`)
