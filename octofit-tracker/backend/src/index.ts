@@ -11,7 +11,7 @@ import workoutsRouter from './routes/workouts';
 dotenv.config();
 
 const app: Express = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
