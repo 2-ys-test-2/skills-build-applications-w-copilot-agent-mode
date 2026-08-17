@@ -1,5 +1,15 @@
 # React + Vite
 
+This frontend connects to the OctoFit backend through the Codespace API URL. In GitHub Codespaces, set VITE_CODESPACE_NAME in .env.local before running the app.
+
+Example:
+
+```bash
+VITE_CODESPACE_NAME=my-codespace-name
+```
+
+If VITE_CODESPACE_NAME is not defined, the app falls back to http://localhost:8000/api so local development still works.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
